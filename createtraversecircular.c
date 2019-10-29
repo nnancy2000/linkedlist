@@ -100,3 +100,25 @@ void createList(int n)
         printf("\nCIRCULAR LINKED LIST CREATED SUCCESSFULLY\n");
     }
 }
+void displayList()
+{
+    struct node *current;
+    int n = 1;
+
+    if(head == NULL)
+    {
+        printf("List is empty.\n");
+    }
+    else
+    {
+        current = head;
+        printf("DATA IN THE LIST:\n");
+
+        do {
+            printf("Data %d = %d\n", n, current->data);
+
+            current = current->next;
+            n++;
+        }while(current != head);
+    }
+}
